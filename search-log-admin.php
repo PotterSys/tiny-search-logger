@@ -9,7 +9,7 @@ class Pslabs_Search_Log_Admin{
     
     public function get_max_logs_per_page(){
         // TODO: add this to an Option page
-        return 2;
+        return 20;
     }
 
     public function get_data( $current_page, $count_per_page){
