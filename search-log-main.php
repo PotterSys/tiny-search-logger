@@ -73,6 +73,10 @@ class Pslabs_Search_Log {
 
 $pslog = new Pslabs_Search_Log();
 
+function tiny_search_logger_init() {
+  load_plugin_textdomain( 'pslabs-tiny-search-logger', false, 'tiny-search-logger/languages' );
+}
+add_action( 'init', 'tiny_search_logger_init' );
 add_action( 'init', Pslabs_Search_Log::add_wpdb_shortcut() );
 add_action( 'wp', array( &$pslog, 'add_search_to_db') );
 add_action( 'admin_menu', array( &$pslog, 'add_menu_page') );
